@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Snippet List{% endblock title %}
+
+{% block content %}
+<form action="" method="get">
+<div class="form-group">
+    <label for="inputAddress5">Ad</label>
+    {{filter.form.firstName}}
+</div>
+<button type="submit">search</button>
+</form>
+
+
+<ul>
+  {% for snippet in filter.qs %}
+    <li>
+      <a href="/student/list/">{{ snippet.firstName }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
